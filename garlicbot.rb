@@ -7,9 +7,6 @@ client = Twitter::REST::Client.new do |config|
   config.access_token_secret = "I5ZhyTCcw7Czgm0su8p02YLK0IttcKRSMcjH8bUHfEHoA"
 end
 
-# DELETE THIS LATER
-puts "sleepy"
-sleep(7200)
 
 while true
   client.search("garlic").take(100).each do |tweet|
