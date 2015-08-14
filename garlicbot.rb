@@ -12,7 +12,7 @@ while true
   client.search("garlic").take(100).each do |tweet|
     
     screen_name = tweet.user.screen_name
-    if !screen_name.include? "garlic"
+    if !screen_name.upcase.include? "GARLIC"
       begin
         client.retweet tweet
         puts "RETWEETED"
